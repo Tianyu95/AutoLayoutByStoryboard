@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EZCommentKeyBoard">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKC-ci-wrw">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gQ2-Mj-u7i">
+                            <rect key="frame" x="5" y="5" width="555" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZS-vO-Hos">
+                            <rect key="frame" x="9" y="5" width="547" height="32"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivd-8v-Kzj">
+                            <rect key="frame" x="565" y="5" width="30" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="3og-Qe-RbH"/>
+                            </constraints>
+                            <state key="normal" image="ToolViewEmotion"/>
+                            <state key="selected" image="ToolViewKeyboard"/>
+                            <connections>
+                                <action selector="imageViewTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="FnM-gD-YDL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="gQ2-Mj-u7i" firstAttribute="top" secondItem="mKC-ci-wrw" secondAttribute="top" constant="5" id="0TJ-0U-oSg"/>
+                        <constraint firstAttribute="bottom" secondItem="gQ2-Mj-u7i" secondAttribute="bottom" constant="5" id="Ehz-o8-ai2"/>
+                        <constraint firstAttribute="trailing" secondItem="Ivd-8v-Kzj" secondAttribute="trailing" constant="5" id="M16-As-NbX"/>
+                        <constraint firstItem="RZS-vO-Hos" firstAttribute="leading" secondItem="gQ2-Mj-u7i" secondAttribute="leading" constant="4" id="N2f-5T-3hf"/>
+                        <constraint firstItem="Ivd-8v-Kzj" firstAttribute="top" secondItem="mKC-ci-wrw" secondAttribute="top" constant="5" id="faJ-RE-9me"/>
+                        <constraint firstAttribute="height" constant="40" id="gDY-xH-inx"/>
+                        <constraint firstItem="RZS-vO-Hos" firstAttribute="trailing" secondItem="gQ2-Mj-u7i" secondAttribute="trailing" constant="-4" id="mB3-wa-ZxH"/>
+                        <constraint firstItem="RZS-vO-Hos" firstAttribute="top" secondItem="gQ2-Mj-u7i" secondAttribute="top" id="oOA-em-9qp"/>
+                        <constraint firstAttribute="bottom" secondItem="Ivd-8v-Kzj" secondAttribute="bottom" constant="5" id="pNK-1g-6gQ"/>
+                        <constraint firstItem="gQ2-Mj-u7i" firstAttribute="leading" secondItem="mKC-ci-wrw" secondAttribute="leading" constant="5" id="pgn-NI-sNK"/>
+                        <constraint firstItem="Ivd-8v-Kzj" firstAttribute="leading" secondItem="gQ2-Mj-u7i" secondAttribute="trailing" constant="5" id="wx6-hu-xXB"/>
+                        <constraint firstItem="RZS-vO-Hos" firstAttribute="bottom" secondItem="gQ2-Mj-u7i" secondAttribute="bottom" constant="2" id="wzK-GX-ShC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mKC-ci-wrw" secondAttribute="trailing" id="1hp-56-VP8"/>
+                <constraint firstItem="mKC-ci-wrw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EpT-vk-i9S"/>
+                <constraint firstItem="mKC-ci-wrw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="P8G-9B-Ib2"/>
+            </constraints>
+            <connections>
+                <outlet property="TextViewInput" destination="gQ2-Mj-u7i" id="wUh-CK-Zyn"/>
+                <outlet property="btnEmoji" destination="Ivd-8v-Kzj" id="rlR-fa-sw1"/>
+                <outlet property="placeholderLabel" destination="RZS-vO-Hos" id="BmK-YO-3tL"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="ToolViewEmotion" width="35" height="35"/>
+        <image name="ToolViewKeyboard" width="35" height="35"/>
+    </resources>
+</document>

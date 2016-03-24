@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="415" id="KGk-i7-Jjw" customClass="XLabelListCell">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="415"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="414.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLL-Xv-g7k">
+                        <rect key="frame" x="21" y="29" width="46" height="30"/>
+                        <state key="normal" title="标题"/>
+                    </button>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jOj-FW-64V">
+                        <rect key="frame" x="93" y="24" width="277" height="128"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xLL-Xv-g7k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="4Bi-ha-x4n"/>
+                    <constraint firstItem="jOj-FW-64V" firstAttribute="leading" secondItem="xLL-Xv-g7k" secondAttribute="trailing" constant="8" id="5Nr-MY-N0K"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="jOj-FW-64V" secondAttribute="bottom" id="B42-2r-cJa"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xLL-Xv-g7k" secondAttribute="trailing" multiplier="5" id="DSr-4a-k0c"/>
+                    <constraint firstItem="jOj-FW-64V" firstAttribute="top" secondItem="xLL-Xv-g7k" secondAttribute="top" id="hKn-vY-o8W"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jOj-FW-64V" secondAttribute="trailing" id="wsk-mO-uRt"/>
+                    <constraint firstItem="xLL-Xv-g7k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="zjL-go-yFE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="265" y="243.5"/>
+        </tableViewCell>
+    </objects>
+</document>

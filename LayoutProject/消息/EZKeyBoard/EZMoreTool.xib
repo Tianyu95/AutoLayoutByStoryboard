@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EZMoreTool">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="221" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sax-TC-I7A" userLabel="Button1">
+                    <rect key="frame" x="46" y="20" width="59" height="59"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="sax-TC-I7A" secondAttribute="height" multiplier="1:1" id="TMP-or-GYg"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="sharemore_pic"/>
+                </button>
+                <button opaque="NO" tag="222" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU3-2X-gxw" userLabel="Button2">
+                    <rect key="frame" x="195" y="20" width="59" height="59"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fU3-2X-gxw" secondAttribute="height" multiplier="1:1" id="4LJ-pU-mDm"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="sharemore_video"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="相册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-rn-OY4">
+                    <rect key="frame" x="62" y="83" width="28" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="照相" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6Q-YM-OrQ">
+                    <rect key="frame" x="211" y="83" width="28" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.59784482758620694" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="9aE-rn-OY4" firstAttribute="centerX" secondItem="sax-TC-I7A" secondAttribute="centerX" id="4hj-ZA-eJJ"/>
+                <constraint firstItem="sax-TC-I7A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="DEl-mp-sCQ"/>
+                <constraint firstItem="9aE-rn-OY4" firstAttribute="top" secondItem="sax-TC-I7A" secondAttribute="bottom" constant="4" id="GhE-9r-0m8"/>
+                <constraint firstItem="fU3-2X-gxw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="0.75" id="Hlj-AL-HFE"/>
+                <constraint firstItem="g6Q-YM-OrQ" firstAttribute="centerX" secondItem="fU3-2X-gxw" secondAttribute="centerX" id="dNY-D3-O5g"/>
+                <constraint firstItem="sax-TC-I7A" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="0.25" id="dUv-eX-Xie"/>
+                <constraint firstItem="g6Q-YM-OrQ" firstAttribute="top" secondItem="fU3-2X-gxw" secondAttribute="bottom" constant="4" id="rTk-LZ-dzJ"/>
+                <constraint firstItem="fU3-2X-gxw" firstAttribute="top" secondItem="sax-TC-I7A" secondAttribute="top" id="sS7-u4-Nox"/>
+            </constraints>
+            <connections>
+                <outlet property="btn1" destination="sax-TC-I7A" id="eZX-6M-waU"/>
+                <outlet property="btn2" destination="fU3-2X-gxw" id="9Nv-k1-fhk"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="sharemore_pic" width="59" height="59"/>
+        <image name="sharemore_video" width="59" height="59"/>
+    </resources>
+</document>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EZKeyBoard">
+            <connections>
+                <outlet property="TextViewInput" destination="hN5-wL-lzr" id="q9I-RH-7Jb"/>
+                <outlet property="btnChangeVoiceState" destination="FWU-i8-LNi" id="o28-NO-JDL"/>
+                <outlet property="btnEmoji" destination="tV0-sW-dhP" id="gCf-pe-cnM"/>
+                <outlet property="btnMore" destination="Y1w-ZP-BVN" id="lyr-Ak-Epa"/>
+                <outlet property="btnVoiceRecord" destination="MDm-DW-ZdP" id="Otf-xz-Are"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="vQ9-lf-fID"/>
+                <outlet property="placeholderLabel" destination="EDi-lW-7Ca" id="yBc-xU-sg7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="298"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qt5-tj-eIj">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDm-DW-ZdP">
+                            <rect key="frame" x="43" y="5" width="479" height="30"/>
+                            <state key="normal" title="Hold to Talk" backgroundImage="chat_message_back">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="disabled" title="Hold to Talk"/>
+                            <state key="highlighted" title="Release to Send"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWU-i8-LNi">
+                            <rect key="frame" x="5" y="5" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="EWg-g2-V2W"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="ToolViewInputVoice"/>
+                            <state key="selected" backgroundImage="ToolViewKeyboard"/>
+                            <connections>
+                                <action selector="voiceRecord:" destination="-1" eventType="touchUpInside" id="auK-9N-sfS"/>
+                                <outletCollection property="fd_collapsibleConstraints" destination="EWg-g2-V2W" id="U2W-Mj-cEM"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hN5-wL-lzr">
+                            <rect key="frame" x="43" y="5" width="479" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="LmO-FP-g1G"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDi-lW-7Ca">
+                            <rect key="frame" x="47" y="5" width="479" height="32"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV0-sW-dhP">
+                            <rect key="frame" x="530" y="5" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="FMw-gu-HUi"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="ToolViewEmotion"/>
+                            <state key="selected" backgroundImage="ToolViewKeyboard"/>
+                            <connections>
+                                <action selector="imageViewTap:" destination="-1" eventType="touchUpInside" id="vrH-cQ-fUU"/>
+                                <outletCollection property="fd_collapsibleConstraints" destination="FMw-gu-HUi" id="Kvr-Yi-bdc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1w-ZP-BVN">
+                            <rect key="frame" x="565" y="5" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="N9v-yi-5UI"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="TypeSelectorBtn_Black"/>
+                            <connections>
+                                <action selector="moreViewTap:" destination="-1" eventType="touchUpInside" id="4bn-9d-Zjn"/>
+                                <outletCollection property="fd_collapsibleConstraints" destination="N9v-yi-5UI" id="pEl-pE-EvY"/>
+                                <outletCollection property="fd_collapsibleConstraints" destination="SvZ-9q-ypC" id="a6c-tk-UA3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="tV0-sW-dhP" firstAttribute="top" secondItem="qt5-tj-eIj" secondAttribute="top" constant="5" id="7Gd-Ji-srZ"/>
+                        <constraint firstAttribute="bottom" secondItem="tV0-sW-dhP" secondAttribute="bottom" constant="5" id="Khz-Qy-IqX"/>
+                        <constraint firstAttribute="height" constant="40" id="LSR-sU-GeY"/>
+                        <constraint firstItem="EDi-lW-7Ca" firstAttribute="top" secondItem="hN5-wL-lzr" secondAttribute="top" id="Nd8-Vp-psa"/>
+                        <constraint firstItem="hN5-wL-lzr" firstAttribute="leading" secondItem="FWU-i8-LNi" secondAttribute="trailing" constant="8" id="Otz-qD-wkg"/>
+                        <constraint firstItem="Y1w-ZP-BVN" firstAttribute="leading" secondItem="tV0-sW-dhP" secondAttribute="trailing" constant="5" id="SvZ-9q-ypC"/>
+                        <constraint firstItem="FWU-i8-LNi" firstAttribute="leading" secondItem="qt5-tj-eIj" secondAttribute="leading" constant="5" id="Tyg-5f-1ob"/>
+                        <constraint firstItem="EDi-lW-7Ca" firstAttribute="trailing" secondItem="hN5-wL-lzr" secondAttribute="trailing" constant="4" id="VsX-Uz-H6H"/>
+                        <constraint firstItem="MDm-DW-ZdP" firstAttribute="top" secondItem="qt5-tj-eIj" secondAttribute="top" constant="5" id="WJY-NF-6on"/>
+                        <constraint firstItem="MDm-DW-ZdP" firstAttribute="height" secondItem="hN5-wL-lzr" secondAttribute="height" id="Xhf-yC-Unx"/>
+                        <constraint firstItem="tV0-sW-dhP" firstAttribute="leading" secondItem="hN5-wL-lzr" secondAttribute="trailing" constant="8" id="YRW-OA-7xO"/>
+                        <constraint firstAttribute="bottom" secondItem="hN5-wL-lzr" secondAttribute="bottom" constant="5" id="aQR-Ae-iQ8"/>
+                        <constraint firstItem="EDi-lW-7Ca" firstAttribute="bottom" secondItem="hN5-wL-lzr" secondAttribute="bottom" constant="2" id="fNP-jm-M6e"/>
+                        <constraint firstAttribute="bottom" secondItem="Y1w-ZP-BVN" secondAttribute="bottom" constant="5" id="iLe-Kg-u1q"/>
+                        <constraint firstAttribute="bottom" secondItem="MDm-DW-ZdP" secondAttribute="bottom" constant="5" id="iQx-JW-9Rm"/>
+                        <constraint firstItem="MDm-DW-ZdP" firstAttribute="width" secondItem="hN5-wL-lzr" secondAttribute="width" id="j6g-cA-7cD"/>
+                        <constraint firstAttribute="trailing" secondItem="Y1w-ZP-BVN" secondAttribute="trailing" constant="5" id="jCc-Ay-6dK"/>
+                        <constraint firstAttribute="bottom" secondItem="FWU-i8-LNi" secondAttribute="bottom" constant="5" id="mdG-zU-sfo"/>
+                        <constraint firstItem="MDm-DW-ZdP" firstAttribute="leading" secondItem="hN5-wL-lzr" secondAttribute="leading" id="tGT-vV-JEc"/>
+                        <constraint firstItem="EDi-lW-7Ca" firstAttribute="leading" secondItem="hN5-wL-lzr" secondAttribute="leading" constant="4" id="twg-C3-JWy"/>
+                        <constraint firstItem="FWU-i8-LNi" firstAttribute="top" secondItem="qt5-tj-eIj" secondAttribute="top" constant="5" id="uYq-Co-oja"/>
+                        <constraint firstItem="hN5-wL-lzr" firstAttribute="top" secondItem="qt5-tj-eIj" secondAttribute="top" constant="5" id="xKn-AZ-gDh"/>
+                        <constraint firstItem="Y1w-ZP-BVN" firstAttribute="top" secondItem="qt5-tj-eIj" secondAttribute="top" constant="5" id="zUg-pj-oDr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qt5-tj-eIj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2me-Uz-IJX"/>
+                <constraint firstItem="qt5-tj-eIj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Evi-O3-n9n"/>
+                <constraint firstAttribute="trailing" secondItem="qt5-tj-eIj" secondAttribute="trailing" id="ffZ-WV-Cmm"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="288" y="-345"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ToolViewEmotion" width="35" height="35"/>
+        <image name="ToolViewInputVoice" width="35" height="35"/>
+        <image name="ToolViewKeyboard" width="35" height="35"/>
+        <image name="TypeSelectorBtn_Black" width="35" height="35"/>
+        <image name="chat_message_back" width="399" height="64"/>
+    </resources>
+</document>
