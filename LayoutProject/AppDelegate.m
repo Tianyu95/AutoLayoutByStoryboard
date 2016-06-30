@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-//bengdi
+
 @interface AppDelegate ()
 
 @end
